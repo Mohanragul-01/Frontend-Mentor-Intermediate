@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+
+  <!-- META-DATA -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <!-- STYLESHEET -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- TITLE -->
+  <title>Todo app</title>
+
+</head>
+
+<body>
+    <div class="background"></div>
+    
+    <div class="wrapper">
+      <div class="header">
+        <h1>todo</h1>
+        <img class="theme" src="images/icon-sun.svg" alt="theme-icon" />
+      </div>
+
+      <div class="todo-input">
+        <button></button>
+        <input name="todo-input" id="todo-input" aria-label="todo-input" type="text" placeholder="Create a new todo..." />
+      </div>
+
+      <div class="todos">
+        <ul id="simpleList"></ul>
+      </div>
+
+      <div class="mob">
+        <div class="mob-count"><span></span> items left</div>
+        <div class="mob-clear">Clear Completed</div>
+      </div>
+
+      <div class="footer">
+        <div class="count"><span></span> items left</div>
+        <div class="filters">
+          <label>
+            <input type="radio" name="filter" id="all" checked />
+            <span>All</span>
+          </label>
+          <label>
+            <input type="radio" name="filter" id="active" />
+            <span>Active</span>
+          </label>
+          <label>
+            <input type="radio" name="filter" id="completed" />
+            <span>Completed</span>
+          </label>
+        </div>
+        <div class="clear">Clear Completed</div>
+      </div>
+
+      <div class="dragdrop">
+        <p>Drag and drop to reorder list</p>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>

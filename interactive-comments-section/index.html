@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- META-DATA -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <!-- STYLESHEET -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- TITLE -->
+  <title>Interactive comments section</title>
+
+</head>
+
+<body>
+
+  <main>
+    <div class="row">
+      <div class="card">
+        <div class="card-container">
+          <div class="vote">
+            <button class="vote-up">
+              <img src="images/icon-plus.svg" alt="">
+            </button>
+            <span>12</span>
+            <button class="vote-down">
+              <img src="images/icon-minus.svg" alt="">
+            </button>
+          </div>
+          
+          <div>
+            <div class="profile">
+              <img src="images/avatars/image-amyrobson.png" alt="">
+              <p class="name">amyrobson</p>
+              <p>1 month ago</p>
+            </div>
+            <div>
+              <p>Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've nailed the design and the responsiveness at various breakpoints works really well.</p>
+            </div>
+            <div class="interact-container">
+              <button class="btn btn-reply">
+                <img src="images/icon-reply.svg" alt="">
+                <p>Reply</p>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="reply-section hidden">
+          <img src="images/avatars/image-juliusomo.png" alt="">
+          <textarea></textarea>
+          <button class="btn-post">Reply</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="card">
+        <div class="card-container">
+          <div class="vote">
+            <button class="vote-up">
+              <img src="images/icon-plus.svg" alt="">
+            </button>
+            <span>5</span>
+            <button class="vote-down">
+              <img src="images/icon-minus.svg" alt="">
+            </button>
+          </div>
+          <div>
+            <div class="profile">
+              <img src="images/avatars/image-maxblagun.png" alt="">
+              <p class="name">maxblagun</p>
+              <p>2 weeks ago</p>
+            </div>
+            <div>
+              <p>Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've nailed the design and the responsiveness at various breakpoints works really well.</p>
+            </div>
+            <div class="interact-container">
+              <button class="btn btn-reply">
+                <img src="images/icon-reply.svg" alt="">
+                <p>Reply</p>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="reply-section hidden">
+          <img src="images/avatars/image-juliusomo.png" alt="">
+          <textarea></textarea>
+          <button class="btn-post">Reply</button>
+        </div>
+      </div>
+      <div class="sub-card">
+        <div class="line"></div>
+        <div class="card">
+          <div class="card-container">
+            <div class="vote">
+              <button class="vote-up">
+                <img src="images/icon-plus.svg" alt="">
+              </button>
+              <span>4</span>
+              <button class="vote-down">
+                <img src="images/icon-minus.svg" alt="">
+              </button>
+            </div>
+            <div>
+              <div class="profile">
+                <img src="images/avatars/image-ramsesmiron.png" alt="">
+                <p class="name">ramsesmiron</p>
+                <p>1 week ago</p>
+              </div>
+              <div>
+                <p><span class="initial">@maxblagun</span> If you're still new, I'd recommend focusing on the fundamentals of HTML, CSS, and JS before considering React. It's very tempting to jump ahead but lay a solid foundation first.</p>
+              </div>
+              <div class="interact-container">
+                <button class="btn btn-reply">
+                  <img src="images/icon-reply.svg" alt="">
+                  <p>Reply</p>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="reply-section hidden">
+            <img src="images/avatars/image-juliusomo.png" alt="">
+            <textarea></textarea>
+            <button class="btn-post">Reply</button>
+          </div>
+        </div>
+      </div>
+      <div class="sub-card">
+        <div class="line"></div>
+        <div class="card">
+          <div class="card-container">
+            <div class="vote">
+              <button class="vote-up">
+                <img src="images/icon-plus.svg" alt="">
+              </button>
+              <span>2</span>
+              <button class="vote-down">
+                <img src="images/icon-minus.svg" alt="">
+              </button>
+            </div>
+            <div>
+              <div class="profile">
+                <img src="images/avatars/image-juliusomo.png" alt="">
+                <p class="name">juliusomo</p>
+                <span class="you">you</span>
+                <p>2 days ago</p>
+              </div>
+              <div>
+                <p><span class="initial">@ramsesmiron</span> I couldn't agree more with this. Everything moves so fast and it always seems like everyone knows the newest library/framework. But the fundamentals are what stay constant.</p>
+              </div>
+              <div class="interact-container">
+                <button class="btn btn-delete" onclick="showModal()">
+                  <img src="images/icon-delete.svg" alt="">
+                  <p>Delete</p>
+                </button>
+                <button class="btn btn-edit" onclick="editComment()">
+                  <img src="images/icon-edit.svg" alt="">
+                  <p>Edit</p>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="reply-section hidden">
+            <img src="images/avatars/image-juliusomo.png" alt="">
+            <textarea></textarea>
+            <button class="btn-post" id="btn-send">Reply</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="reply-section new-comment">
+        <img src="images/avatars/image-juliusomo.png" alt="">
+        <textarea placeholder="Add a comment..."></textarea>
+        <button class="btn-post btn-send">Send</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="modal hidden">
+      <div class="inner-modal">
+        <p class="title">Delete comment</p>
+        <p>Are you sure to delete this comment? This will remove comment and can't be undone.</p>
+        <div class="modal-btn">
+          <button class="btn-cancel">No, Cancel</button>
+          <button class="btn-trash">Yes, Delete</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+
+</body>
+
+</html>
